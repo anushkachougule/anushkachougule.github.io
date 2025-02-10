@@ -1,0 +1,851 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* -------------------Color Variables -------------------*/
+:root {
+    /* Fonts */
+    --font-primary: "Space Grotesk", sans-serif;
+    --font-secondary: "Mulish", sans-serif;
+
+    /* Colors */
+    --primary-teal: #2A9D8F;
+    --dark-blue: #264653;
+    --accent-aqua: #85C7C2;
+    --background-light: #F4F5F7;
+    --background-alt: #EAECEF; /* Slightly darker for alternating sections */
+    --text-dark: #2F2F2F;
+}
+
+/* ======================= Global Styles ======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Apply Background Image with Overlay */
+body {
+    font-family: var(--font-secondary);
+    background-image: url('images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-dark);
+}
+
+/* Subtle Overlay for Readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1;
+}
+/* Highlighted text styling */
+.highlight {
+    color: var(--primary-teal); /* Adjust to match your theme */
+    font-weight: 600;
+}
+
+/* ======================= Navbar ======================= */
+.navbar {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    position: sticky;
+    
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    top: 15px;
+}
+
+.navbar ul li a {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-teal);
+    transform: scale(1.08);
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ======================= Section Styling ======================= */
+.section-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.85); /* Subtle transparency */
+    padding: 40px;
+    border-radius: 12px; /* Slightly rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.section-container h3 {
+    font-family: var(--font-primary);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-align: center; /* Center all section titles */
+    margin-bottom: 15px;
+}
+
+
+/* Hover Effect for Sections */
+.section-container:hover {
+    background: rgba(255, 255, 255, 0.95); /* More visible on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Lifts section slightly */
+}
+
+
+/* ======================= Banner ======================= */
+.banner {
+    border-radius: 25px;
+    min-height: 30vh;  /* Increased height for better centering */
+    margin: 10px auto; /* Center the banner horizontally */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Ensures vertical centering */
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Ensure the container inside is also centered */
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Banner Content */
+.banner-content {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content inside */
+    justify-content: center;
+}
+
+/* Banner Headline */
+.banner-content h1 {
+    font-family: var(--font-primary);
+    color: var(--dark-blue);
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Banner Text */
+.banner-content p {
+    font-family: var(--font-secondary);
+    color: var(--text-dark);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 80%;
+    text-align: center; /* Ensures text stays centered */
+    margin: 10px auto; /* Centers the paragraph */
+}
+/* Tagline */
+.tagline {
+    font-family: var(--font-secondary);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    font-style: italic;
+  }
+  
+
+/* ======================= About Me Section ======================= */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.85); /* Subtle transparent background */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.about-container {
+    max-width: 900px;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.about-container h2 {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.about-container p {
+    font-family: var(--font-secondary);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Highlight important words in bold */
+.about-container strong {
+    color: var(--primary-teal);
+    font-weight: 600;
+}
+
+/* About Me Buttons */
+.about-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Adjust button size and style */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark-blue);
+    background: white;
+    border: 2px solid var(--dark-blue);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+    background: var(--dark-blue);
+    color: white;
+}
+
+/* ======================= Education Section ======================= */
+.education-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.85); /* Subtle transparency */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+/* Education Container */
+.education-container {
+    max-width: 900px;
+    width: 90%;
+    padding: 20px;
+}
+
+/* Section Title */
+.education-container h3 {
+    font-family: var(--font-primary);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+    text-align: left; /* Align title to the left */
+}
+
+/* Timeline Structure */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline Line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--dark-blue);
+}
+
+/* Timeline Event */
+.timeline-event {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 50px;
+}
+
+/* Timeline Indicator (Dots) */
+.timeline-event::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 18px;
+    width: 14px;
+    height: 14px;
+    background: var(--primary-teal);
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Date Styling */
+.timeline-date {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-teal);
+    margin-bottom: 8px;
+    width: 150px; /* Fixed width for better alignment */
+    position: relative;
+    top: 20px; /* Move dates down */
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Institution Name */
+.timeline-content h4 {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 5px;
+}
+
+/* Degree & Details */
+.timeline-content p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .education-container {
+        max-width: 100%;
+    }
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-event {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        gap: 5px;
+    }
+
+    .timeline-event::before {
+        left: 5px;
+    }
+
+    .timeline-date {
+        width: 100%; /* Adjust width for mobile */
+    }
+
+    .timeline-content {
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+
+/* ======================= Buttons ======================= */
+.btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjusted padding */
+    border-radius: 8px; /* More rounded for modern look */
+    font-size: 15px; /* Standardized font size */
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--dark-blue); /* Blue text */
+    background: white; /* White background */
+    border: 2px solid var(--dark-blue); /* Blue border */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.btn:hover {
+    background: var(--dark-blue); /* Blue background */
+    color: white; /* White text */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Resume & Contact Buttons */
+.resume-btn, .contact-btn {
+    border-color: var(--dark-blue);
+}
+
+/* Hover Effect for Resume & Contact Buttons */
+.resume-btn:hover, .contact-btn:hover {
+    background: var(--dark-blue);
+    color: white;
+}
+
+/* Buttons Container */
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Increased spacing */
+    margin-top: 30px; /* Moves entire button section down */
+}
+
+/* ======================= Projects ======================= */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center; /* Ensures all content inside is properly centered */
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Titles */
+.project-card h4 {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+}
+
+/* Project Description */
+.project-card p {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Video Demo Thumbnail */
+.video-demo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Optimized Thumbnail Size */
+.video-demo img {
+    width: 100%;  /* Make it responsive */
+    max-width: 300px; /* Prevent it from being too large */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Add Hover Effect */
+.video-demo img:hover {
+    transform: scale(1.1); /* Subtle zoom effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Light shadow effect */
+}
+
+/* Project Links */
+.project-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Individual Project Links */
+.project-link {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Project Links */
+.project-link:hover {
+    background: var(--dark-blue);
+    color: white;
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack projects in one column */
+    }
+
+    .video-demo img {
+        max-width: 250px; /* Slightly smaller for mobile screens */
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ======================= Contact Section ======================= */
+.contact-section {
+    text-align: center;
+    padding: 50px 0;
+    
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Contact Card Hover Effect */
+.contact-card:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Card Links */
+.contact-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contact Icons */
+.contact-card img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-card:hover img {
+    transform: scale(1.2);
+}
+
+/* ======================= Skills Section ======================= */
+.skills-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Grid Layout: 2x2 */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 25px; /* Space between skill cards */
+    align-items: start;
+}
+
+/* Skill Category Box */
+.skill-category {
+    background: rgba(255, 255, 255, 0.9); /* Light background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    width: 100%;
+}
+
+/* Skill Category Title */
+.skill-category h4 {
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    text-align: left; /* Ensures the text stays left-aligned */
+}
+
+/* Skill List */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+/* Skill Buttons */
+.skill-badge {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    background: white;
+    border: 2px solid var(--dark-blue);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.skill-badge:hover {
+    background: var(--dark-blue);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ======================= Responsive Adjustments ======================= */
+@media screen and (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Stack items for tablets */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills-section {
+        padding: 40px 15px;
+    }
+
+    .skill-category {
+        width: 100%;
+    }
+
+    .skill-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+/* ======================= Footer ======================= */
+footer {
+    background-color: var(--dark-blue);
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Footer Top */
+.footer-top {
+    padding-bottom: 20px;
+}
+
+/* Footer Title */
+.footer-title {
+    font-family: var(--font-primary);
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer Links */
+.footer-links, .social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a, .social-links a {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover, .social-links a:hover {
+    color: var(--primary-teal);
+    text-decoration: underline;
+}
+
+
+/* Popup Message */
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: var(--dark-blue);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--primary-teal);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+/* Copyright Section */
+.copyright {
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================= Responsive Tweaks ======================= */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner {
+        min-height: 25vh;
+        padding: 20px;
+    }
+
+    .banner-content {
+        max-width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 13px;  /* Slightly smaller font for mobile */
+        padding: 7px 12px;  /* More compact on smaller screens */
+    }
+
+    .resume-btn, .contact-btn {
+        padding: 7px 12px;
+    }
+
+    .section-container {
+        padding: 30px;
+    }
+
+    /* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-container p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-buttons {
+        justify-content: center;
+    }
+}
+
+}
