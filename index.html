@@ -4,28 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anushka Chougule</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Typing Effect for the Tagline
-      const text = "Aspiring Data Analyst, ML Engineer & AI Researcher";
-      const speed = 50;
-      let i = 0;
-  
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("typing-text").innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
-        } else {
-          document.querySelector(".cursor").style.display = "none";
-        }
-      }
-      typeWriter();
-    });
-</script>
+<script src="scripts.js"></script>
   
 <body>
 
@@ -51,24 +32,46 @@
         </ul>
     </nav>
 
-    <!-- About Me Section -->
-    <section class="section-container about-section" id="about">
-        <div class="about-container">
-            <h2>About Me 👋</h2>
-            <p>
-                Passionate about data, I love uncovering insights, solving complex problems, and driving real-world impact with analytics and machine learning.
-            </p>
-            <p>
-                Currently pursuing my Master’s in Information Management at the University of Maryland, I also mentor students as a Teaching Assistant while working on impactful data-driven projects.
-            </p>
+   <!-- About Me Section -->
+<section class="section-container about-section" id="about">
+    <div class="about-container">
+        <h2>About Me 👋</h2>
+        <p>
+            I’ve always been drawn to the way <span class="highlight">data uncovers patterns</span> and 
+            <span class="highlight">drives better decision-making</span>. Whether it's 
+            <span class="highlight">identifying anomalies</span>, <span class="highlight">predicting trends</span>, 
+            or <span class="highlight">building intuitive visualizations</span>, I love turning complex information 
+            into actionable insights.
+        </p>
+        <p>
+            Currently, I’m pursuing my <span class="highlight">Master’s in Information Management</span> at the 
+            <span class="highlight">University of Maryland</span>, where I’m refining my skills in 
+            <span class="highlight">data science and analytics</span>. Through hands-on projects, I’ve worked on 
+            <span class="highlight">analyzing financial risks</span>, <span class="highlight">detecting fraudulent activity</span>, 
+            and <span class="highlight">creating interactive data experiences</span>—each reinforcing my passion for 
+            bridging raw data with real-world impact.
+        </p>
+        <p>
+            Beyond my work, I enjoy <span class="highlight">mentoring students</span> as a 
+            <span class="highlight">Teaching Assistant</span>, helping them navigate 
+            <span class="highlight">programming and analytics concepts</span>. Outside of data, you’ll find me 
+            <span class="highlight">exploring new places</span>, collecting books I <em>swear</em> I’ll read, or 
+            diving into the latest advancements in <span class="highlight">AI</span>.
+        </p>
+        <p>
+            If you’re passionate about <span class="highlight">data</span>, <span class="highlight">tech</span>, or just 
+            looking to exchange ideas, <span class="highlight">let’s connect!</span>
+        </p>
 
-            <!-- Buttons for Resume & Opportunities -->
-            <div class="about-buttons">
-                <a href="files/Anushka_Chougule_Resume.pdf" target="_blank" class="btn resume-btn">📄 View My Resume</a>
-                <a href="mailto:anushka7@umd.edu" class="btn contact-btn">💼 Open for Opportunities</a>
-            </div>
+        <!-- Buttons for Resume & Opportunities -->
+        <div class="about-buttons">
+            <a href="files/Anushka_Chougule_Resume.pdf" target="_blank" class="btn resume-btn">📄 View My Resume</a>
+            <a href="mailto:anushka7@umd.edu" class="btn contact-btn">💼 Open for Opportunities</a>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Education Section -->
     <section class="section-container education-section" id="education">
@@ -114,7 +117,9 @@
         <div class="project-card">
             <h4>Hotel Booking Data Analysis</h4>
             <p>Performed an exploratory analysis on 119,390 hotel bookings, uncovering trends in cancellations, guest demographics, and revenue impact.</p>
+            
             <a href="https://github.com/anushkachougule/Exploratory-Data-Analysis-Hotel-Booking-Demand-Dataset" class="project-link">View Project</a>
+            
         </div>
 
         <!-- New Project: Grand Prix Explorer -->
@@ -125,14 +130,8 @@
             <!-- Video Demo -->
             <div class="video-demo">
                 <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_LINK" target="_blank">
-                    <img src="img/youtube-thumbnail.jpg" alt="Grand Prix Explorer Demo">
+                    
                 </a>
-            </div>
-
-            <!-- Screenshot Gallery -->
-            <div class="project-gallery">
-                <img src="img/screenshot1.jpg" alt="Dashboard Preview">
-                <img src="img/screenshot2.jpg" alt="Race Insights">
             </div>
 
             <!-- Project Links -->
@@ -147,10 +146,11 @@
 
 
    <!-- Skills Section -->
-<section class="section-container skills-container" id="skills">
+<section class="section-container skills-section" id="skills">
     <h3>Skills 💡</h3>
+    
     <div class="skills-container">
-        
+        <!-- Programming -->
         <div class="skill-category">
             <h4>Programming</h4>
             <div class="skill-list">
@@ -162,6 +162,7 @@
             </div>
         </div>
 
+        <!-- Data Science -->
         <div class="skill-category">
             <h4>Data Science</h4>
             <div class="skill-list">
@@ -173,6 +174,7 @@
             </div>
         </div>
 
+        <!-- Big Data & Cloud -->
         <div class="skill-category">
             <h4>Big Data & Cloud</h4>
             <div class="skill-list">
@@ -184,6 +186,7 @@
             </div>
         </div>
 
+        <!-- Visualization & BI -->
         <div class="skill-category">
             <h4>Visualization & BI</h4>
             <div class="skill-list">
@@ -194,43 +197,54 @@
                 <span class="skill-badge">Seaborn</span>
             </div>
         </div>
-
     </div>
 </section>
 
-    <!-- Contact Section -->
-    <section class="section-container contact-section" id="contact">
-        <h3>Get in Touch 📬</h3>
-        <p class="contact-text">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+   <!-- Contact & Footer Section -->
+<footer id="contact-footer">
+    <div class="footer-container">
         
+        <!-- Contact Title -->
+        <h3 class="footer-title">
+            Let's Connect! <img src="images/computer.svg" alt="Computer Icon">
+        </h3>
+        <p class="contact-text">Interested in working together or have a question? Feel free to reach out!</p>
+
+        <!-- Contact Links -->
         <div class="contact-container">
+            <!-- Email -->
             <div class="contact-card">
                 <a href="mailto:anushka7@umd.edu">
                     <img src="images/email_icon.png" alt="Email">
-                    <p>Email</p>
+                    
                 </a>
             </div>
 
+            <!-- LinkedIn -->
             <div class="contact-card">
                 <a href="https://linkedin.com/in/anushkachougule" target="_blank">
                     <img src="images/linkedin_icon.png" alt="LinkedIn">
-                    <p>LinkedIn</p>
+                    
                 </a>
             </div>
 
+            <!-- GitHub -->
             <div class="contact-card">
                 <a href="https://github.com/anushkachougule" target="_blank">
                     <img src="images/github_icon.png" alt="GitHub">
-                    <p>GitHub</p>
+                    
                 </a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="footer">
+
+       
+        <!-- Copyright -->
         <p class="copyright">© 2025 Anushka Chougule</p>
-    </footer>
+    </div>
+</footer>
+
+
 
 </body>
 </html>
