@@ -35,3 +35,19 @@ function copyEmail() {
       popup.style.display = "none";
   }, 2000);
 }
+
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+      });
+  });
+});
+
+const timelineItems = document.querySelectorAll(".timeline-event");
+
+
+
